@@ -41,8 +41,8 @@ export default function About() {
       </p>
       <p>
         I am currently
-        learning about{" "}
-        <span className="font-medium">Design Patterns & Performance Improvements</span>.
+        working as a{" "}
+        <span className="font-medium">Full Stack & Devops Developer</span>.
       </p>
     </motion.section>
   );
