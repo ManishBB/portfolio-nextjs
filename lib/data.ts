@@ -1,5 +1,5 @@
 import React from "react";
-import { FaReact } from "react-icons/fa";
+import { FaLaptopCode, FaReact } from "react-icons/fa";
 import { DiAndroid, DiNodejsSmall } from "react-icons/di";
 import megablog from "@/public/megablog.png";
 import threads from "@/public/threads.png";
@@ -33,6 +33,14 @@ export const links = [
 ] as const;
 
 export const experiencesData = [
+  {
+    title: "Full-Stack Develoepr - Deep-link",
+    location: "Hyderabad, IN",
+    description:
+      "Building products of web portals and mobile apps from scratch.",
+    icon: React.createElement(FaLaptopCode),
+    date: "Jan, 2024 - Present",
+  },
   {
     title: "Backend Intern Lead - OYTIE",
     location: "Pune, IN",
