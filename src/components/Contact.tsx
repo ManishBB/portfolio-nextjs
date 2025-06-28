@@ -73,26 +73,26 @@ const Contact = () => {
       <motion.div
         aria-hidden
         initial={{ opacity: 0 }}
-        animate={{ opacity: 0.2 }}
-        className="absolute left-[-10%] top-1/2 w-[175px] sm:w-[350px] h-[175px] sm:h-[350px] bg-gradient-to-br from-blue-200 via-green-200 to-purple-200 rounded-full blur-3xl opacity-40 z-0"
-        animate={{
+        animate={{ 
+          opacity: 0.2,
           scale: [1, 1.1, 1],
           x: [0, 30, 0],
           y: [0, -30, 0],
         }}
         transition={{ duration: 13, repeat: Infinity, ease: 'easeInOut' }}
+        className="absolute left-[-10%] top-1/2 w-[175px] sm:w-[350px] h-[175px] sm:h-[350px] bg-gradient-to-br from-blue-200 via-green-200 to-purple-200 rounded-full blur-3xl opacity-40 z-0"
       />
       <motion.div
         aria-hidden
         initial={{ opacity: 0 }}
-        animate={{ opacity: 0.15 }}
-        className="absolute right-[-10%] bottom-0 w-[125px] sm:w-[250px] h-[125px] sm:h-[250px] bg-gradient-to-br from-purple-100 via-blue-100 to-green-100 rounded-full blur-2xl opacity-30 z-0"
-        animate={{
+        animate={{ 
+          opacity: 0.15,
           scale: [1, 1.08, 1],
           x: [0, -20, 0],
           y: [0, 20, 0],
         }}
         transition={{ duration: 15, repeat: Infinity, ease: 'easeInOut' }}
+        className="absolute right-[-10%] bottom-0 w-[125px] sm:w-[250px] h-[125px] sm:h-[250px] bg-gradient-to-br from-purple-100 via-blue-100 to-green-100 rounded-full blur-2xl opacity-30 z-0"
       />
       
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">

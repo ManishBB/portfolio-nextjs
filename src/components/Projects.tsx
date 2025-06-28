@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
-import { ExternalLink, Github, Play } from 'lucide-react'
+import { Github, Play } from 'lucide-react'
 import { useState } from 'react'
 
 const Projects = () => {
@@ -94,26 +94,26 @@ const Projects = () => {
       <motion.div
         aria-hidden
         initial={{ opacity: 0 }}
-        animate={{ opacity: 0.25 }}
-        className="absolute left-[-10%] top-[-10%] w-[250px] sm:w-[500px] h-[250px] sm:h-[500px] bg-yellow-100 dark:bg-yellow-900/20 rounded-full blur-3xl opacity-40 z-0"
-        animate={{
+        animate={{ 
+          opacity: 0.25,
           scale: [1, 1.12, 1],
           x: [0, 40, 0],
           y: [0, 40, 0],
         }}
         transition={{ duration: 15, repeat: Infinity, ease: 'easeInOut' }}
+        className="absolute left-[-10%] top-[-10%] w-[250px] sm:w-[500px] h-[250px] sm:h-[500px] bg-yellow-100 dark:bg-yellow-900/20 rounded-full blur-3xl opacity-40 z-0"
       />
       <motion.div
         aria-hidden
         initial={{ opacity: 0 }}
-        animate={{ opacity: 0.18 }}
-        className="absolute right-[-10%] bottom-[-10%] w-[175px] sm:w-[350px] h-[175px] sm:h-[350px] bg-blue-100 dark:bg-blue-900/20 rounded-full blur-2xl opacity-30 z-0"
-        animate={{
+        animate={{ 
+          opacity: 0.18,
           scale: [1, 1.08, 1],
           x: [0, -30, 0],
           y: [0, -30, 0],
         }}
         transition={{ duration: 17, repeat: Infinity, ease: 'easeInOut' }}
+        className="absolute right-[-10%] bottom-[-10%] w-[175px] sm:w-[350px] h-[175px] sm:h-[350px] bg-blue-100 dark:bg-blue-900/20 rounded-full blur-2xl opacity-30 z-0"
       />
       
       <div className="relative z-10">

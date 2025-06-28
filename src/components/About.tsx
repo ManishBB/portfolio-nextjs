@@ -36,26 +36,26 @@ const About = () => {
       <motion.div
         aria-hidden
         initial={{ opacity: 0 }}
-        animate={{ opacity: 0.3 }}
-        className="absolute left-[-10%] top-1/3 w-[200px] sm:w-[400px] h-[200px] sm:h-[400px] bg-green-100 dark:bg-green-900/20 rounded-full blur-3xl opacity-40 z-0"
-        animate={{
+        animate={{ 
+          opacity: 0.3,
           scale: [1, 1.08, 1],
           x: [0, 30, 0],
           y: [0, -30, 0],
         }}
         transition={{ duration: 14, repeat: Infinity, ease: 'easeInOut' }}
+        className="absolute left-[-10%] top-1/3 w-[200px] sm:w-[400px] h-[200px] sm:h-[400px] bg-green-100 dark:bg-green-900/20 rounded-full blur-3xl opacity-40 z-0"
       />
       <motion.div
         aria-hidden
         initial={{ opacity: 0 }}
-        animate={{ opacity: 0.2 }}
-        className="absolute right-[-10%] bottom-0 w-[150px] sm:w-[300px] h-[150px] sm:h-[300px] bg-purple-100 dark:bg-purple-900/20 rounded-full blur-2xl opacity-30 z-0"
-        animate={{
+        animate={{ 
+          opacity: 0.2,
           scale: [1, 1.1, 1],
           x: [0, -20, 0],
           y: [0, 20, 0],
         }}
         transition={{ duration: 16, repeat: Infinity, ease: 'easeInOut' }}
+        className="absolute right-[-10%] bottom-0 w-[150px] sm:w-[300px] h-[150px] sm:h-[300px] bg-purple-100 dark:bg-purple-900/20 rounded-full blur-2xl opacity-30 z-0"
       />
       <div className="relative z-10">
         <motion.div
