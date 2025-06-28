@@ -1,10 +1,9 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
-import { Separator } from '@/components/ui/separator'
-import { GraduationCap, Award, Code, Database, Cloud, Globe } from 'lucide-react'
+import { GraduationCap, Code, Database, Cloud, Globe } from 'lucide-react'
 
 const About = () => {
   const skills = {
@@ -32,13 +31,13 @@ const About = () => {
   ]
   
   return (
-    <section id="about" className="py-20 relative overflow-hidden">
+    <section id="about" className="py-12 sm:py-20 relative overflow-hidden">
       {/* Animated Background */}
       <motion.div
         aria-hidden
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.3 }}
-        className="absolute left-[-10%] top-1/3 w-[400px] h-[400px] bg-green-100 dark:bg-green-900/20 rounded-full blur-3xl opacity-40 z-0"
+        className="absolute left-[-10%] top-1/3 w-[200px] sm:w-[400px] h-[200px] sm:h-[400px] bg-green-100 dark:bg-green-900/20 rounded-full blur-3xl opacity-40 z-0"
         animate={{
           scale: [1, 1.08, 1],
           x: [0, 30, 0],
@@ -50,7 +49,7 @@ const About = () => {
         aria-hidden
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.2 }}
-        className="absolute right-[-10%] bottom-0 w-[300px] h-[300px] bg-purple-100 dark:bg-purple-900/20 rounded-full blur-2xl opacity-30 z-0"
+        className="absolute right-[-10%] bottom-0 w-[150px] sm:w-[300px] h-[150px] sm:h-[300px] bg-purple-100 dark:bg-purple-900/20 rounded-full blur-2xl opacity-30 z-0"
         animate={{
           scale: [1, 1.1, 1],
           x: [0, -20, 0],
@@ -64,13 +63,13 @@ const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-800 dark:text-white mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-800 dark:text-white mb-4">
             About Me
           </h2>
-          <p className="text-lg text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
-            I'm a passionate software engineer with expertise in full-stack development, 
+          <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-3xl mx-auto px-4">
+            I&apos;m a passionate software engineer with expertise in full-stack development, 
             specializing in modern web technologies and scalable applications.
           </p>
         </motion.div>
@@ -81,16 +80,16 @@ const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="mb-16"
+          className="mb-12 sm:mb-16"
         >
           <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-slate-800 dark:text-white mb-2 flex items-center justify-center gap-2">
-              <GraduationCap className="h-6 w-6 text-blue-600" />
+            <h3 className="text-xl sm:text-2xl font-bold text-slate-800 dark:text-white mb-2 flex items-center justify-center gap-2">
+              <GraduationCap className="h-5 w-5 sm:h-6 sm:w-6 text-blue-600" />
               Education
             </h3>
-            <p className="text-slate-600 dark:text-slate-400">My academic background and qualifications</p>
+            <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400">My academic background and qualifications</p>
           </div>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
             {education.map((edu, index) => (
               <motion.div
                 key={index}
@@ -101,18 +100,18 @@ const About = () => {
                 className="glass-card modern-card"
               >
                 <Card className="bg-transparent shadow-none border-0 h-full">
-                  <CardContent className="p-6 space-y-4">
-                    <div className="space-y-3">
-                      <h4 className="text-lg font-semibold text-slate-800 dark:text-white">
+                  <CardContent className="p-4 sm:p-6 space-y-3 sm:space-y-4">
+                    <div className="space-y-2 sm:space-y-3">
+                      <h4 className="text-base sm:text-lg font-semibold text-slate-800 dark:text-white">
                         {edu.degree}
                       </h4>
-                      <p className="text-sm text-blue-600 dark:text-blue-400 font-medium">
+                      <p className="text-xs sm:text-sm text-blue-600 dark:text-blue-400 font-medium">
                         {edu.school}
                       </p>
-                      <p className="text-sm text-slate-500 dark:text-slate-400">
+                      <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400">
                         {edu.period}
                       </p>
-                      <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                      <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                         {edu.details}
                       </p>
                     </div>
@@ -131,16 +130,16 @@ const About = () => {
           viewport={{ once: true }}
         >
           <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-slate-800 dark:text-white mb-2 flex items-center justify-center gap-2">
-              <Code className="h-6 w-6 text-green-600" />
+            <h3 className="text-xl sm:text-2xl font-bold text-slate-800 dark:text-white mb-2 flex items-center justify-center gap-2">
+              <Code className="h-5 w-5 sm:h-6 sm:w-6 text-green-600" />
               Skills & Technologies
             </h3>
-            <p className="text-slate-600 dark:text-slate-400">Technologies and tools I work with</p>
+            <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400">Technologies and tools I work with</p>
           </div>
           <div className="glass-card modern-card">
             <Card className="bg-transparent shadow-none border-0">
-              <CardContent className="p-6">
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <CardContent className="p-4 sm:p-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
                   {Object.entries(skills).map(([category, skillList], index) => (
                     <motion.div
                       key={category}
@@ -148,20 +147,20 @@ const About = () => {
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.6, delay: 0.1 * index }}
                       viewport={{ once: true }}
-                      className="space-y-4"
+                      className="space-y-3 sm:space-y-4"
                     >
                       <div className="flex items-center gap-2 pb-2 border-b border-slate-200 dark:border-slate-700">
-                        {category === 'Languages' && <Code className="h-4 w-4 text-blue-500" />}
-                        {category === 'Frontend' && <Globe className="h-4 w-4 text-green-500" />}
-                        {category === 'Backend' && <Code className="h-4 w-4 text-purple-500" />}
-                        {category === 'Databases' && <Database className="h-4 w-4 text-orange-500" />}
-                        {category === 'Cloud & DevOps' && <Cloud className="h-4 w-4 text-indigo-500" />}
-                        {category === 'Other' && <Code className="h-4 w-4 text-pink-500" />}
-                        <h4 className="font-semibold text-slate-800 dark:text-white text-lg">
+                        {category === 'Languages' && <Code className="h-3 w-3 sm:h-4 sm:w-4 text-blue-500" />}
+                        {category === 'Frontend' && <Globe className="h-3 w-3 sm:h-4 sm:w-4 text-green-500" />}
+                        {category === 'Backend' && <Code className="h-3 w-3 sm:h-4 sm:w-4 text-purple-500" />}
+                        {category === 'Databases' && <Database className="h-3 w-3 sm:h-4 sm:w-4 text-orange-500" />}
+                        {category === 'Cloud & DevOps' && <Cloud className="h-3 w-3 sm:h-4 sm:w-4 text-indigo-500" />}
+                        {category === 'Other' && <Code className="h-3 w-3 sm:h-4 sm:w-4 text-pink-500" />}
+                        <h4 className="font-semibold text-slate-800 dark:text-white text-base sm:text-lg">
                           {category}
                         </h4>
                       </div>
-                      <div className="flex flex-wrap gap-2">
+                      <div className="flex flex-wrap gap-1 sm:gap-2">
                         {skillList.map((skill) => (
                           <Badge key={skill} variant="secondary" className="text-xs bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">
                             {skill}

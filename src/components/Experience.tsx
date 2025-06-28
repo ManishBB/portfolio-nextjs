@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Separator } from '@/components/ui/separator'
-import { Building2, Calendar, MapPin, ExternalLink } from 'lucide-react'
+import { Building2, Calendar, MapPin } from 'lucide-react'
 
 const Experience = () => {
   const experiences = [
@@ -36,13 +36,13 @@ const Experience = () => {
   ]
 
   return (
-    <section id="experience" className="py-20 relative overflow-hidden">
+    <section id="experience" className="py-12 sm:py-20 relative overflow-hidden">
       {/* Animated Background */}
       <motion.div
         aria-hidden
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.2 }}
-        className="absolute top-0 left-0 w-full h-40 bg-blue-100 dark:bg-blue-900/20 blur-2xl opacity-40 z-0"
+        className="absolute top-0 left-0 w-full h-20 sm:h-40 bg-blue-100 dark:bg-blue-900/20 blur-2xl opacity-40 z-0"
         animate={{
           x: [0, 40, 0],
         }}
@@ -52,7 +52,7 @@ const Experience = () => {
         aria-hidden
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.15 }}
-        className="absolute bottom-0 right-0 w-[300px] h-[300px] bg-purple-100 dark:bg-purple-900/20 rounded-full blur-3xl opacity-30 z-0"
+        className="absolute bottom-0 right-0 w-[150px] sm:w-[300px] h-[150px] sm:h-[300px] bg-purple-100 dark:bg-purple-900/20 rounded-full blur-3xl opacity-30 z-0"
         animate={{
           scale: [1, 1.05, 1],
           x: [0, -30, 0],
@@ -66,18 +66,18 @@ const Experience = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-800 dark:text-white mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-800 dark:text-white mb-4">
             Work Experience
           </h2>
-          <p className="text-lg text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-3xl mx-auto px-4">
             My professional journey in software development, working on diverse projects 
             and technologies to deliver impactful solutions.
           </p>
         </motion.div>
 
-        <div className="space-y-8">
+        <div className="space-y-6 sm:space-y-8">
           {experiences.map((exp, index) => (
             <motion.div
               key={index}
@@ -90,23 +90,23 @@ const Experience = () => {
               <Card className="bg-transparent shadow-none border-0">
                 <div className="absolute top-0 left-0 w-1 h-full bg-blue-500"></div>
                 <CardHeader>
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 sm:gap-4">
                     <div>
-                      <CardTitle className="text-xl text-slate-800 dark:text-white flex items-center gap-2">
-                        <Building2 className="h-5 w-5 text-blue-600" />
+                      <CardTitle className="text-lg sm:text-xl text-slate-800 dark:text-white flex items-center gap-2">
+                        <Building2 className="h-4 w-4 sm:h-5 sm:w-5 text-blue-600" />
                         {exp.title}
                       </CardTitle>
                       <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4 mt-2">
-                        <p className="text-blue-600 dark:text-blue-400 font-medium">
+                        <p className="text-sm sm:text-base text-blue-600 dark:text-blue-400 font-medium">
                           {exp.company}
                         </p>
-                        <div className="flex items-center gap-4 text-sm text-slate-500 dark:text-slate-400">
+                        <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 text-xs sm:text-sm text-slate-500 dark:text-slate-400">
                           <span className="flex items-center gap-1">
-                            <MapPin className="h-4 w-4" />
+                            <MapPin className="h-3 w-3 sm:h-4 sm:w-4" />
                             {exp.location}
                           </span>
                           <span className="flex items-center gap-1">
-                            <Calendar className="h-4 w-4" />
+                            <Calendar className="h-3 w-3 sm:h-4 sm:w-4" />
                             {exp.period}
                           </span>
                         </div>
@@ -114,10 +114,10 @@ const Experience = () => {
                     </div>
                   </div>
                 </CardHeader>
-                <CardContent className="space-y-4">
-                  <ul className="space-y-3">
+                <CardContent className="space-y-3 sm:space-y-4">
+                  <ul className="space-y-2 sm:space-y-3">
                     {exp.description.map((item, itemIndex) => (
-                      <li key={itemIndex} className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                      <li key={itemIndex} className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                         • {item}
                       </li>
                     ))}
@@ -126,10 +126,10 @@ const Experience = () => {
                   <Separator />
                   
                   <div>
-                    <h4 className="font-semibold text-slate-800 dark:text-white mb-3">
+                    <h4 className="font-semibold text-slate-800 dark:text-white mb-2 sm:mb-3 text-sm sm:text-base">
                       Technologies Used:
                     </h4>
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-1 sm:gap-2">
                       {exp.technologies.map((tech) => (
                         <Badge key={tech} variant="outline" className="text-xs bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 border-blue-200 dark:border-blue-700">
                           {tech}

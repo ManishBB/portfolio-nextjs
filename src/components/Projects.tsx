@@ -51,7 +51,7 @@ const Projects = () => {
     const hiddenTechs = technologies.slice(maxVisible)
 
     return (
-      <div className="flex flex-wrap gap-2 relative">
+      <div className="flex flex-wrap gap-1 sm:gap-2 relative">
         {visibleTechs.map((tech) => (
           <Badge key={tech} variant="secondary" className="text-xs bg-slate-100 text-slate-700 dark:bg-slate-700 dark:text-slate-300 border-0">
             {tech}
@@ -71,7 +71,7 @@ const Projects = () => {
             {/* Popup for hidden technologies */}
             {hoveredProject === index && (
               <div className="absolute bottom-full left-0 mb-2 p-3 bg-white dark:bg-slate-800 rounded-lg shadow-xl border border-slate-200 dark:border-slate-700 z-50 min-w-max">
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-1 sm:gap-2">
                   {hiddenTechs.map((tech) => (
                     <Badge key={tech} variant="secondary" className="text-xs bg-slate-100 text-slate-700 dark:bg-slate-700 dark:text-slate-300 border-0">
                       {tech}
@@ -89,13 +89,13 @@ const Projects = () => {
   }
 
   return (
-    <section id="projects" className="py-20 relative overflow-hidden">
+    <section id="projects" className="py-12 sm:py-20 relative overflow-hidden">
       {/* Animated Background */}
       <motion.div
         aria-hidden
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.25 }}
-        className="absolute left-[-10%] top-[-10%] w-[500px] h-[500px] bg-yellow-100 dark:bg-yellow-900/20 rounded-full blur-3xl opacity-40 z-0"
+        className="absolute left-[-10%] top-[-10%] w-[250px] sm:w-[500px] h-[250px] sm:h-[500px] bg-yellow-100 dark:bg-yellow-900/20 rounded-full blur-3xl opacity-40 z-0"
         animate={{
           scale: [1, 1.12, 1],
           x: [0, 40, 0],
@@ -107,7 +107,7 @@ const Projects = () => {
         aria-hidden
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.18 }}
-        className="absolute right-[-10%] bottom-[-10%] w-[350px] h-[350px] bg-blue-100 dark:bg-blue-900/20 rounded-full blur-2xl opacity-30 z-0"
+        className="absolute right-[-10%] bottom-[-10%] w-[175px] sm:w-[350px] h-[175px] sm:h-[350px] bg-blue-100 dark:bg-blue-900/20 rounded-full blur-2xl opacity-30 z-0"
         animate={{
           scale: [1, 1.08, 1],
           x: [0, -30, 0],
@@ -122,17 +122,17 @@ const Projects = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-800 dark:text-white mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-800 dark:text-white mb-4">
             Featured Projects
           </h2>
-          <p className="text-lg text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-3xl mx-auto px-4">
             Here are some of my recent projects that showcase my skills in full-stack development.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={index}
@@ -148,42 +148,42 @@ const Projects = () => {
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-300"></div>
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-white text-center">
-                      <div className="text-6xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
+                      <div className="text-4xl sm:text-6xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
                         {project.icon}
                       </div>
                     </div>
                   </div>
                   
                   {/* Floating Action Buttons */}
-                  <div className="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute top-3 sm:top-4 right-3 sm:right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <Button
                       size="sm"
                       onClick={() => window.open(project.liveDemo, '_blank')}
-                      className="bg-white/20 backdrop-blur-sm text-white hover:bg-white/30 border-white/30"
+                      className="bg-white/20 backdrop-blur-sm text-white hover:bg-white/30 border-white/30 text-xs sm:text-sm h-8 sm:h-9"
                     >
-                      <Play className="h-4 w-4 mr-1" />
+                      <Play className="h-3 w-3 sm:h-4 sm:w-4 mr-1" />
                       Demo
                     </Button>
                     <Button
                       size="sm"
                       variant="outline"
                       onClick={() => window.open(project.github, '_blank')}
-                      className="border-white/30 text-white hover:bg-white/20 backdrop-blur-sm"
+                      className="border-white/30 text-white hover:bg-white/20 backdrop-blur-sm h-8 w-8 sm:h-9 sm:w-9 p-0"
                     >
-                      <Github className="h-4 w-4" />
+                      <Github className="h-3 w-3 sm:h-4 sm:w-4" />
                     </Button>
                   </div>
                 </div>
 
                 {/* Project Content */}
-                <CardContent className="p-6 space-y-4 flex-1 flex flex-col">
+                <CardContent className="p-4 sm:p-6 space-y-3 sm:space-y-4 flex-1 flex flex-col">
                   {/* Title */}
-                  <h3 className="text-xl font-bold text-slate-800 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
+                  <h3 className="text-lg sm:text-xl font-bold text-slate-800 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
                     {project.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-slate-600 dark:text-slate-300 leading-relaxed flex-1">
+                  <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed flex-1">
                     {truncateDescription(project.description)}
                   </p>
 
@@ -193,20 +193,20 @@ const Projects = () => {
                   </div>
 
                   {/* Action Buttons */}
-                  <div className="flex gap-3 pt-2 flex-shrink-0">
+                  <div className="flex gap-2 sm:gap-3 pt-2 flex-shrink-0">
                     <Button
                       onClick={() => window.open(project.liveDemo, '_blank')}
-                      className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg hover:shadow-xl transition-all duration-300"
+                      className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 text-xs sm:text-sm h-9 sm:h-10"
                     >
-                      <ExternalLink className="h-4 w-4 mr-2" />
-                      Demo
+                      <Play className="h-3 w-3 sm:h-4 sm:w-4 mr-1" />
+                      Live Demo
                     </Button>
                     <Button
                       variant="outline"
                       onClick={() => window.open(project.github, '_blank')}
-                      className="flex-1 border-2 border-slate-300 dark:border-slate-600 hover:bg-slate-50 dark:hover:bg-slate-800 shadow-lg hover:shadow-xl transition-all duration-300"
+                      className="border-slate-300 dark:border-slate-600 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all duration-300 text-xs sm:text-sm h-9 sm:h-10"
                     >
-                      <Github className="h-4 w-4 mr-2" />
+                      <Github className="h-3 w-3 sm:h-4 sm:w-4 mr-1" />
                       Code
                     </Button>
                   </div>

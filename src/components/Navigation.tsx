@@ -16,7 +16,7 @@ const Navigation = () => {
       setScrolled(window.scrollY > 50)
       // Active section highlight
       const sections = ['home', 'about', 'experience', 'projects', 'contact']
-      for (let sec of sections) {
+      for (const sec of sections) {
         const el = document.getElementById(sec)
         if (el) {
           const rect = el.getBoundingClientRect()
@@ -66,7 +66,7 @@ const Navigation = () => {
       ref={navRef}
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      className={`fixed top-6 left-1/2 -translate-x-1/2 z-[100] w-[95vw] max-w-3xl rounded-2xl shadow-xl transition-all duration-300 ${
+      className={`fixed top-2 sm:top-6 left-1/2 -translate-x-1/2 z-[100] w-[95vw] max-w-3xl rounded-2xl shadow-xl transition-all duration-300 ${
         scrolled
           ? 'bg-white/60 dark:bg-slate-900/60 backdrop-blur-lg border border-slate-200/60 dark:border-slate-800/60'
           : 'bg-white/30 dark:bg-slate-900/30 backdrop-blur-md border border-transparent'
@@ -75,11 +75,11 @@ const Navigation = () => {
     >
       {/* Scroll Progress Bar */}
       <div className="absolute left-0 top-0 h-1 w-full bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 rounded-t-2xl" style={{ width: 'var(--scroll-progress, 0%)', transition: 'width 0.2s' }} />
-      <div className="flex items-center justify-between h-16 px-4 relative">
+      <div className="flex items-center justify-between h-14 sm:h-16 px-3 sm:px-4 relative">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className="text-xl font-bold text-slate-800 dark:text-white tracking-tight"
+          className="text-lg sm:text-xl font-bold text-slate-800 dark:text-white tracking-tight"
         >
           Manish Bhamare
         </motion.div>
@@ -115,10 +115,10 @@ const Navigation = () => {
             variant="ghost"
             size="icon"
             onClick={() => setIsOpen(!isOpen)}
-            className="text-slate-600 dark:text-slate-300"
+            className="text-slate-600 dark:text-slate-300 h-10 w-10"
             aria-label="Open menu"
           >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
+            {isOpen ? <X size={20} /> : <Menu size={20} />}
           </Button>
         </div>
       </div>
@@ -129,15 +129,15 @@ const Navigation = () => {
         className="md:hidden bg-white/80 dark:bg-slate-900/90 border-t border-slate-200 dark:border-slate-700 overflow-hidden rounded-b-2xl"
         style={{ transition: 'height 0.3s, opacity 0.3s' }}
       >
-        <div className="px-4 py-4 space-y-2">
+        <div className="px-4 py-4 space-y-1">
           {navItems.map((item) => (
             <motion.button
               key={item.name}
               onClick={() => scrollToSection(item.href)}
-              className={`block w-full text-left text-lg font-medium py-2 rounded transition-colors duration-200 ${
+              className={`block w-full text-left text-base font-medium py-3 px-3 rounded-lg transition-colors duration-200 ${
                 active === item.name ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/30' : 'text-slate-700 dark:text-slate-200'
               }`}
-              whileHover={{ scale: 1.04, backgroundColor: 'rgba(59,130,246,0.08)' }}
+              whileHover={{ scale: 1.02, backgroundColor: 'rgba(59,130,246,0.08)' }}
             >
               {item.name}
             </motion.button>

@@ -1,9 +1,8 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
-import { Mail, Phone, MapPin, Linkedin, Github, Globe, Send, MessageCircle, Bird } from 'lucide-react'
+import { Card, CardContent } from '@/components/ui/card'
+import { Mail, Phone, MapPin, Linkedin, Github, Globe, Bird } from 'lucide-react'
 
 const Contact = () => {
   const contactInfo = [
@@ -69,13 +68,13 @@ const Contact = () => {
     ]
 
   return (
-    <section id="contact" className="py-20 relative overflow-hidden">
+    <section id="contact" className="py-12 sm:py-20 relative overflow-hidden">
       {/* Animated Background */}
       <motion.div
         aria-hidden
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.2 }}
-        className="absolute left-[-10%] top-1/2 w-[350px] h-[350px] bg-gradient-to-br from-blue-200 via-green-200 to-purple-200 rounded-full blur-3xl opacity-40 z-0"
+        className="absolute left-[-10%] top-1/2 w-[175px] sm:w-[350px] h-[175px] sm:h-[350px] bg-gradient-to-br from-blue-200 via-green-200 to-purple-200 rounded-full blur-3xl opacity-40 z-0"
         animate={{
           scale: [1, 1.1, 1],
           x: [0, 30, 0],
@@ -87,7 +86,7 @@ const Contact = () => {
         aria-hidden
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.15 }}
-        className="absolute right-[-10%] bottom-0 w-[250px] h-[250px] bg-gradient-to-br from-purple-100 via-blue-100 to-green-100 rounded-full blur-2xl opacity-30 z-0"
+        className="absolute right-[-10%] bottom-0 w-[125px] sm:w-[250px] h-[125px] sm:h-[250px] bg-gradient-to-br from-purple-100 via-blue-100 to-green-100 rounded-full blur-2xl opacity-30 z-0"
         animate={{
           scale: [1, 1.08, 1],
           x: [0, -20, 0],
@@ -102,13 +101,13 @@ const Contact = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-800 dark:text-white mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-800 dark:text-white mb-4">
             Get In Touch
           </h2>
-          <p className="text-lg text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
-            I'm always open to discussing new opportunities, interesting projects, 
+          <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-3xl mx-auto px-4">
+            I&apos;m always open to discussing new opportunities, interesting projects, 
             or just having a chat about technology and development.
           </p>
         </motion.div>
@@ -119,7 +118,7 @@ const Contact = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
-          className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6"
         >
           {contactInfo.map((info, index) => (
             <motion.div
@@ -131,20 +130,20 @@ const Contact = () => {
               whileHover={{ y: -5 }}
             >
               <Card className="h-full bg-white dark:bg-slate-900 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-slate-200 dark:border-slate-700 overflow-hidden group">
-                <CardContent className="p-6 text-center">
+                <CardContent className="p-4 sm:p-6 text-center">
                   <motion.div
                     whileHover={{ scale: 1.1, rotate: 5 }}
                     transition={{ duration: 0.3 }}
-                    className={`w-12 h-12 ${info.color} rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg`}
+                    className={`w-10 h-10 sm:w-12 sm:h-12 ${info.color} rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4 shadow-lg`}
                   >
-                    <info.icon className="h-6 w-6 text-white" />
+                    <info.icon className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
                   </motion.div>
-                  <h3 className="font-semibold text-slate-800 dark:text-white mb-2">
+                  <h3 className="font-semibold text-slate-800 dark:text-white mb-2 text-sm sm:text-base">
                     {info.label}
                   </h3>
                   <a
                     href={info.href}
-                    className={`text-sm ${info.textColor} hover:opacity-80 transition-opacity`}
+                    className={`text-xs sm:text-sm ${info.textColor} hover:opacity-80 transition-opacity`}
                   >
                     {info.value}
                   </a>
@@ -163,22 +162,22 @@ const Contact = () => {
               whileHover={{ y: -5 }}
             >
               <Card className="h-full bg-white dark:bg-slate-900 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-slate-200 dark:border-slate-700 overflow-hidden group">
-                <CardContent className="p-6 text-center">
+                <CardContent className="p-4 sm:p-6 text-center">
                   <motion.div
                     whileHover={{ scale: 1.1, rotate: 5 }}
                     transition={{ duration: 0.3 }}
-                    className={`w-12 h-12 ${social.color} rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg`}
+                    className={`w-10 h-10 sm:w-12 sm:h-12 ${social.color} rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4 shadow-lg`}
                   >
-                    <social.icon className="h-6 w-6 text-white" />
+                    <social.icon className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
                   </motion.div>
-                  <h3 className="font-semibold text-slate-800 dark:text-white mb-2">
+                  <h3 className="font-semibold text-slate-800 dark:text-white mb-2 text-sm sm:text-base">
                     {social.label}
                   </h3>
                   <a
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`text-sm ${social.textColor} hover:opacity-80 transition-opacity`}
+                    className={`text-xs sm:text-sm ${social.textColor} hover:opacity-80 transition-opacity`}
                   >
                     {social.value}
                   </a>
