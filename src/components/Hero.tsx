@@ -144,7 +144,7 @@ const Hero = () => {
             variant="outline"
             size="lg"
             className="w-full sm:w-auto px-6 sm:px-8 py-3 border-2 border-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/30 shadow-md hover:scale-105 transition-transform duration-200 text-sm sm:text-base"
-            onClick={() => window.open('/resume.pdf', '_blank')}
+            onClick={() => window.open('/resume/Manish_Bhamare_Resume.pdf', '_blank')}
           >
             <Download className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
             Download Resume
