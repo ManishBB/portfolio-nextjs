@@ -7,8 +7,9 @@ import { ArrowDown, Download, Mail, Linkedin, Github } from 'lucide-react'
 import { useEffect, useState } from 'react'
 
 const heroSubtitles = [
-  'Full-stack software engineer passionate about building scalable web applications',
-  'React, Next.js, Node.js, and modern web technologies',
+  'Full-Stack Software Engineer with 3+ years building AI-powered systems',
+  'Expert in React/Next.js, Node.js/NestJS, Python/FastAPI, and AWS',
+  'Specializing in scalable microservices and RAG-based AI applications',
   'Let\'s build something amazing together!'
 ]
 

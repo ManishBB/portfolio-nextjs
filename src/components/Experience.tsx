@@ -9,14 +9,14 @@ const Experience = () => {
     {
       title: 'Software Engineer',
       company: 'TexAu — Building at Visalaw (gen.visalaw.ai)',
-      location: 'Pune, IN',
+      location: 'Pune, India',
       period: 'July 2025 – Present',
       description: [
         'Architected and implemented a scalable microservices-based system using NestJS, FastAPI, Celery, Supabase, and AWS for AI-driven legal document automation',
         'Built context-aware AI pipelines using LangChain and Pinecone vector database, enabling intelligent chat, document summarization, translation, and private GPT systems',
         'Reduced document processing latency by 35–40% through optimized background job orchestration (Celery), Redis caching, and API refactoring',
         'Designed and delivered end-to-end public APIs, expanding external integrations and increasing product accessibility',
-        'Revamped the platform UI (Next.js v1 →v2), improving frontend performance by 25% via SSR, dynamic imports, memoization, and optimized state management (Zustand + Context)',
+        'Revamped the platform UI (Next.js v1 → v2), improving frontend performance by 25% via SSR, dynamic imports, memoization, and optimized state management (Zustand + Context)',
         'Integrated Stripe payment systems and implemented RBAC for secure multi-tenant workspace management',
         'Managed AWS infrastructure using Terraform, Docker, and CI/CD pipelines; improved observability using Sentry for production stability',
         'Contributed to technical foundation during 1.6M fundraising phase supporting product launch'
@@ -26,8 +26,8 @@ const Experience = () => {
     {
       title: 'Software Engineer',
       company: 'ZYKRR Technologies Pvt. Ltd.',
-      location: 'Gurugram, IN',
-      period: 'June 2024 – June 2025',
+      location: 'Gurugram, India',
+      period: 'June 2023 – June 2025',
       description: [
         'Spearheaded development of a Customer Experience (CX) management platform leveraging NPS and CSAT frameworks to deliver real-time analytics and actionable insights',
         'Improved production system performance by up to 70% through architectural optimizations, query tuning, and backend refactoring',
@@ -38,13 +38,13 @@ const Experience = () => {
         'Delivered enterprise-grade integrations with Salesforce, SFTP systems, and custom rule engines to enable seamless client interoperability',
         'Contributed to US market product revamp, improving scalability by 30% through database and API optimizations'
       ],
-      technologies: ['PostgreSQL', 'AWS', 'CI/CD', 'Salesforce', 'NPS', 'CSAT']
+      technologies: ['Node.js', 'PostgreSQL', 'AWS', 'CI/CD', 'Salesforce', 'NPS', 'CSAT', 'React.js']
     },
     {
       title: 'Full Stack Developer',
       company: 'FlexiLancer',
-      location: 'Pune, IN',
-      period: 'Oct 2023 – May 2025',
+      location: 'Pune, India',
+      period: 'Oct 2022 – May 2023',
       description: [
         'Contributed to the development and optimization of a scalable e-commerce platform, improving transaction processing speed by 35% through backend query tuning and API enhancements',
         'Built a CRM module with real-time order tracking, reducing data retrieval latency by 30% and improving operational efficiency',
@@ -56,7 +56,7 @@ const Experience = () => {
         'Integrated Stripe payment gateway for secure transactions and Kafka for managing high-traffic bookings',
         'Implemented WebSockets for real-time updates and AWS for cloud infrastructure deployment'
       ],
-      technologies: ['Stripe', 'Kafka', 'WebSockets', 'AWS', 'CI/CD']
+      technologies: ['React.js', 'Node.js', 'Stripe', 'Kafka', 'WebSockets', 'AWS', 'CI/CD']
     }
   ]
   return (

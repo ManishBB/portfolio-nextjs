@@ -7,17 +7,18 @@ import { GraduationCap, Code, Database, Cloud, Globe } from 'lucide-react'
 
 const About = () => {
   const skills = {
-    'Languages': ['JavaScript', 'TypeScript', 'Python', 'C++', 'SQL', 'NoSQL'],
-    'Frontend': ['React', 'Next.js', 'HTML/CSS', 'Tailwind CSS'],
-    'Backend': ['Node.js', 'NestJS', 'GraphQL', 'Express.js'],
-    'Databases': ['PostgreSQL', 'MongoDB', 'Redis'],
-    'Cloud & DevOps': ['AWS', 'Docker', 'Kubernetes', 'CI/CD', 'NGINX'],
-    'Other': ['WebSockets', 'Kafka', 'Stripe', 'REST APIs']
+    'Languages': ['JavaScript (ES6+)', 'TypeScript', 'Python', 'SQL', 'Java', 'C++', 'Go'],
+    'Frontend': ['React.js', 'Next.js', 'Zustand', 'React Context', 'HTML5', 'CSS3', 'Tailwind CSS', 'ShadCN', 'Material-UI'],
+    'Backend & APIs': ['Node.js', 'NestJS', 'Express.js', 'FastAPI', 'Gin', 'REST APIs', 'GraphQL', 'WebSockets'],
+    'AI & Data Systems': ['LangChain', 'LangGraph', 'Pinecone (Vector DB)', 'OpenAI APIs', 'AWS Textract', 'RAG Systems', 'Celery', 'Kafka'],
+    'Databases': ['PostgreSQL', 'MongoDB', 'Redis', 'MySQL', 'Supabase'],
+    'Cloud & DevOps': ['AWS (EC2, S3, Lambda)', 'Docker', 'Terraform', 'CI/CD Pipelines', 'NGINX', 'Microservices'],
+    'Tools & Practices': ['Git', 'Stripe API', 'RBAC', 'Agile/Scrum', 'Testing', 'Sentry']
   }
 
   const education = [
     {
-      degree: 'BE in Computer Science',
+      degree: 'Bachelor of Engineering in Computer Science',
       school: 'AISSMS Institute of Information Technology, Pune',
       period: 'Jan 2021 – June 2023',
       details: 'GPA: 9.1/10 | Relevant Coursework: Computer Architecture, Machine Learning Algorithms, Computational Theory, Cloud Computing, Data Science'
@@ -26,7 +27,7 @@ const About = () => {
       degree: 'Diploma in Computer Engineering',
       school: 'Government Polytechnic, Dhule',
       period: 'Aug 2017 – Nov 2020',
-      details: 'Percentile: 91.89 | Relevant Coursework: Data Structures, Operating Systems, DBMS'
+      details: 'Percentile: 91.89 | Relevant Coursework: Data Structures, Operating Systems, Database Management Systems'
     }
   ]
   
@@ -69,8 +70,11 @@ const About = () => {
             About Me
           </h2>
           <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-3xl mx-auto px-4">
-            I&apos;m a passionate software engineer with expertise in full-stack development, 
-            specializing in modern web technologies and scalable applications.
+            Full-Stack Software Engineer with 3+ years of experience building scalable, high-performance web applications
+            and AI-powered systems. Strong expertise in React/Next.js, Node.js/NestJS, and Python (FastAPI), with hands-on
+            experience designing microservices architectures, optimizing PostgreSQL queries, and implementing distributed
+            processing pipelines. Proven track record of improving system performance by up to 70% and building
+            context-aware AI applications using LangChain and vector databases.
           </p>
         </motion.div>
 
@@ -152,10 +156,11 @@ const About = () => {
                       <div className="flex items-center gap-2 pb-2 border-b border-slate-200 dark:border-slate-700">
                         {category === 'Languages' && <Code className="h-3 w-3 sm:h-4 sm:w-4 text-blue-500" />}
                         {category === 'Frontend' && <Globe className="h-3 w-3 sm:h-4 sm:w-4 text-green-500" />}
-                        {category === 'Backend' && <Code className="h-3 w-3 sm:h-4 sm:w-4 text-purple-500" />}
+                        {category === 'Backend & APIs' && <Code className="h-3 w-3 sm:h-4 sm:w-4 text-purple-500" />}
+                        {category === 'AI & Data Systems' && <Code className="h-3 w-3 sm:h-4 sm:w-4 text-pink-500" />}
                         {category === 'Databases' && <Database className="h-3 w-3 sm:h-4 sm:w-4 text-orange-500" />}
                         {category === 'Cloud & DevOps' && <Cloud className="h-3 w-3 sm:h-4 sm:w-4 text-indigo-500" />}
-                        {category === 'Other' && <Code className="h-3 w-3 sm:h-4 sm:w-4 text-pink-500" />}
+                        {category === 'Tools & Practices' && <Code className="h-3 w-3 sm:h-4 sm:w-4 text-slate-500" />}
                         <h4 className="font-semibold text-slate-800 dark:text-white text-base sm:text-lg">
                           {category}
                         </h4>

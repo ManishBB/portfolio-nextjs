@@ -15,7 +15,7 @@ const Navigation = () => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50)
       // Active section highlight
-      const sections = ['home', 'about', 'experience', 'projects', 'contact']
+      const sections = ['home', 'about', 'experience', 'contact']
       for (const sec of sections) {
         const el = document.getElementById(sec)
         if (el) {
@@ -49,7 +49,6 @@ const Navigation = () => {
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
     { name: 'Experience', href: '#experience' },
-    { name: 'Projects', href: '#projects' },
     { name: 'Contact', href: '#contact' },
   ]
 
